@@ -1,0 +1,51 @@
+
+In Ubuntu 22.04, you can use the zip and unzip commands to compress and decompress files and directories, respectively. Here are some examples:
+
+Zip (compress) a file or directory:
+To compress a single file:
+
+bash
+Copy code
+zip compressed_file.zip file.txt
+To compress multiple files:
+
+bash
+Copy code
+zip compressed_files.zip file1.txt file2.txt file3.txt
+To compress an entire directory and its contents:
+
+bash
+Copy code
+zip -r compressed_directory.zip directory_name
+Unzip (decompress) a file:
+To unzip a file:
+
+bash
+Copy code
+unzip compressed_file.zip
+To unzip to a specific directory:
+
+bash
+Copy code
+unzip compressed_file.zip -d destination_directory
+Example: Compressing and Decompressing
+Let's create a sample scenario with a file and a directory:
+
+bash
+Copy code
+# Create a directory with some files
+mkdir my_directory
+echo "Hello World!" > my_directory/file1.txt
+echo "This is a test." > my_directory/file2.txt
+
+# Zip the directory
+zip -r my_directory.zip my_directory
+
+# Unzip the file to a new directory
+mkdir extracted_directory
+unzip my_directory.zip -d extracted_directory
+Now, you'll have a compressed file (my_directory.zip) and an extracted directory (extracted_directory) with the contents of the original directory.
+
+Adjust the file and directory names accordingly based on your actual use case. The -r option in the zip command is used for recursively including the contents of directories.
+
+https://mdshamsfiroz.hashnode.dev/why-top-industry-mentors-recommend-rhel-learn-linux-installation-today
